@@ -1,0 +1,16 @@
+header {
+  background-color: #eb9c0bfd;
+  height: 520 pixels;
+  width: 100%;
+  display:flex;
+  /* justify-content: flex-end; */
+  flex-direction: column;
+  align-items: center;
+  background-color: #00a83b;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+}
+
+
+.avatar{
+  margin-top: 150px;
+}

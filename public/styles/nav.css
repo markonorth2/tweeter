@@ -1,0 +1,25 @@
+
+
+
+nav {
+  background-color: #4056A1;
+  height: 120 pixels;
+  width: 100%;
+  padding: 1.5em;
+  position: fixed;
+  z-index: 1;
+  
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%
+}
+
+span {
+  font-family: 'Bungee', cursive;
+  color: #FFFFFF;
+  display: flex;
+  
+}

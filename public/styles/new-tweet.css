@@ -1,0 +1,103 @@
+.new-tweet{
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: space-between; */
+  padding: 0px 8px 40px 8px;
+  margin: 2em;
+  background-color: pink;
+}
+
+.counter{
+  font-size: 1em;
+  font-family: "Bungee", cursive;
+  color: rgb(62,57,57)
+}
+
+.tweet-button{
+  background-color: blue;
+  font-family: "Bungee", cursive;
+  color: #FFFFFF;
+}
+
+.enter-text{
+  display: flex;
+  flex-direction: column;
+}
+
+.button-and-counter{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 8px 40px 8px;
+
+}
+
+.tweet-box-header{
+  margin-bottom: 20px
+}
+
+#tweet-text {
+ border-bottom: solid;
+ background-color: #CCC8C8;
+ border: none;
+
+}
+/* adding new tweets */
+article {
+  height: 250px;
+  margin: 2em;
+  border: 3px solid  rgb(62, 57, 57);
+  display: flex;
+  flex-direction: column;
+  
+
+}
+article:hover {
+  box-shadow: 5px 10px #888888;
+}
+article header {
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: start;
+  
+}
+article header i {
+  padding-left: 25px;
+}
+article header h4 {
+  padding-left: 25px;
+  flex-grow: 2;
+}
+article header div {
+  padding-right: 25px;
+}
+article p {
+  padding-left: 25px;
+  border-bottom: solid;
+}
+article footer h6 {
+  padding-left: 0;
+  margin: 0;
+  margin-right: auto;
+}
+/* .icons:hover {
+  opacity: .5;
+} */
+
+.fa-flag:hover , .fa-retweet:hover , .fa-heart:hover {
+  opacity: .5;
+}
+
+
+
+.icons{
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+ 
+}
+
+article footer {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
