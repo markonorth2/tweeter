@@ -56,10 +56,10 @@ $(document).ready(function(){
     const $message = $("#tweet-text").val()
     console.log($message.length);
     if ($message === null || $message === ""){
-      alert("invalid input");
+      $(".error-message").text("🛑Your message is too short or invalid!🛑").slideDown(400).slideUp(5000);
     }
     else if ($message.length > 140){
-      alert("your message is too long");
+      $(".error-message").text("🛑Your message is too long!🛑").slideDown(400).slideUp(5000);
     }
     else {
       $.post("/tweets", $data)
