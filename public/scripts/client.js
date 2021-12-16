@@ -16,6 +16,13 @@ const renderTweets = function(tweets) {
   
 }
 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+
 //takes in a tweet object and is responsible for returning a tweet <article> element containing the 
 //entire HTML structure of the tweet.
 
@@ -26,7 +33,7 @@ const createTweetElement = function(tweetData){
     <h4>${tweetData.user.name}</h4>
     <div>${tweetData.user.handle}</div>
   </header>
-  <p>${tweetData.content.text}</p>
+  <p>${escape(tweetData.content.text)}</p>
   <footer>
     <h6>${timeago.format(tweetData.created_at)}</h6>
     <div class="icons">
