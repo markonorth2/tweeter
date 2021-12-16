@@ -11,7 +11,7 @@ const renderTweets = function(tweets) {
     const $tweet = createTweetElement(users);
     
     // takes return value and appends it to the tweets container
-    $('#posted-Tweets').prepend($tweet);
+    $('#posted-tweets').prepend($tweet);
   }
   
 }
@@ -40,22 +40,36 @@ return $tweet;
 }
 
 $(document).ready(function(){
-  $("form.tweet-form").on("submit", function(event) {
-    event.preventDefault();
-    const $data = $(this).serialize();
-    console.log($data);
-    $.post("/tweets", $data)
-      .then(() => {
-        console.log("this is a message")
-      })
-  })
-  
   function loadTweets(){
     $.get("/tweets")
     .then((data) => {
+      $("#posted-tweets").empty();
       renderTweets(data);
       
     })
   }
   loadTweets();
+  $("form.tweet-form").on("submit", function(event) {
+    event.preventDefault();
+    const $data = $(this).serialize();
+    //console.log($data);
+    const $message = $("#tweet-text").val()
+    console.log($message.length);
+    if ($message === null || $message === ""){
+      alert("invalid input");
+    }
+    else if ($message.length > 140){
+      alert("your message is too long");
+    }
+    else {
+      $.post("/tweets", $data)
+      .then(() => {
+        console.log("this is a message")
+        loadTweets();
+      })
+    }
+    
+  })
+  
+  
 })
