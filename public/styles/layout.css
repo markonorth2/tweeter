@@ -16,7 +16,6 @@ html {
 
 
 
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
@@ -31,35 +30,22 @@ body {
 main {
   width: 90%;
   margin: auto;
-  /* display:flex;
-  justify-content: center; */
 
 }
 
-/* Mobile Styles */
+/* Mobile Styles
 @media only screen and (max-width: 767px) {
-  body {
-    /* background-color: #F09A9D; Red */
-  }
-  /* #compose-tweet {
-    margin-top: 120px;
-    margin-left: 500px; */
+  
 }
 
-/* Tablet Styles */
+/* Tablet Styles 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  body {
-    /* background-color: #F5CF8E; Yellow */
-  }
-  /* #compose-tweet {
-    margin-top: 120px;
-    margin-left: 500px; */
-}
+  
+} */
 
 /* Desktop Styles */
 @media only screen and (min-width: 1024px) {
   body {
-    /* background-color: #B2D6FF; Blue */
     display: flex;
   }
   .top-header {
